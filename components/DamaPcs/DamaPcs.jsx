@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import style from "./damaPcs.module.css";
 import { ClickContext } from "../../Context/ClickedContext.jsx";
 import { MoveContext } from "../../Context/MoveContext.jsx";
+import RedItem from "../../img/red.svg";
+import WhiteItem from "../../img/white.svg";
 
 const borderWidht = 29;
 const borderTop = 29;
@@ -49,12 +51,10 @@ const DamaPcs = ({ figureData }) => {
       }}
       onClick={move}
     >
-      {figure == "r" && <img src="../../img/red.svg" alt="red" />}
-      {figure == "w" && <img src="../../img/white.svg" alt="white" />}
+      {figure == "r" && <img src={RedItem} alt="red" />}
+      {figure == "w" && <img src={WhiteItem} alt="white" />}
     </div>
   );
 };
 
 export default DamaPcs;
-
-
